@@ -31,30 +31,26 @@ A.
 
 ### Q. How do I build a bootable ISO?
 
-**On Linux / WSL:**
+You need `grub-mkimage` and `xorriso` on your PATH:
+
+- **Linux**: `sudo apt install grub-pc-bin xorriso`
+- **Windows**: install via MSYS2 (`pacman -S grub xorriso`), Scoop, or grab the binaries manually. If you have QEMU from https://www.qemu.org, xorriso is often bundled at `C:\Program Files\qemu\xorriso.exe`.
+
+Then build:
 
 ```sh
-# Install GRUB tools + xorriso
-sudo apt install grub-pc-bin xorriso
-
-# Build the ISO
 make iso
-
-# Boot it in QEMU
-qemu-system-i386 -cdrom rivera.iso -drive file=persist.img,format=raw,if=ide
 ```
 
 This runs `grub-mkimage` to create a GRUB core image with the `multiboot` and `normal` modules, then `xorriso` bundles it into a bootable ISO with El Torito no-emulation boot.
 
-**On Windows (without Linux/WSL):**
-
-`make iso` requires `grub-mkimage` and `xorriso`, which are Linux tools. On Windows, use QEMU's `-kernel` method instead:
+Boot it in QEMU:
 
 ```sh
-make run
+qemu-system-i386 -cdrom rivera.iso -drive file=persist.img,format=raw,if=ide
 ```
 
-That boots the kernel directly with no ISO needed, which is faster for development.
+Or write it to a USB for real hardware.
 
 ### Q. What can it do so far?
 A. Phase 1 features:
