@@ -17,3 +17,5 @@ Then to run it: `make run-iso or make run-iso-serial`
 First run RiveraOS Setup menuentry, then after installing and rebooting, select RiveraOS.
 
 Thanks for you kind attention to this!
+
+Note: As of 0.0.4, the hard coded paths problem has been fixed and before 0.0.4, you'd have to manually edit all of the hard coded paths!
