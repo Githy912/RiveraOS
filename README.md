@@ -3,6 +3,8 @@ RiveraOS, the FUTURE of Operating Systems as Windows slowly declines.
 
 Prerequisites in case you wanna build yourself manually:
 
+QEMU : www.qemu.org
+
 make: ```winget install ezwinports.make```
 
 gnu-grub 2.12: https://ftp.gnu.org/gnu/grub/grub-2.12-for-windows.zip
