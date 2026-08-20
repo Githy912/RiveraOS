@@ -5,6 +5,10 @@ Prerequisites in case you wanna build yourself manually:
 
 QEMU : www.qemu.org
 
+xorriso: https://github.com/PeyTy/xorriso-exe-for-windows
+
+rust (as of 0.0.4): https://rust-lang.org/tools/install/
+
 make: ```winget install ezwinports.make```
 
 gnu-grub 2.12: https://ftp.gnu.org/gnu/grub/grub-2.12-for-windows.zip
