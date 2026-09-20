@@ -3,6 +3,8 @@ RiveraOS, the FUTURE of Operating Systems as Windows slowly declines.
 
 Prerequisites in case you wanna build yourself manually:
 
+MSVC: Visual Studio Build Tools 2022
+
 QEMU : www.qemu.org
 
 xorriso: https://github.com/PeyTy/xorriso-exe-for-windows
